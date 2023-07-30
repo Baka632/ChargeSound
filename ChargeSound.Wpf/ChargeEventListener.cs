@@ -97,7 +97,6 @@ internal class HiddenWindow : Window
                         PowerStateChanged?.Invoke();
                         handled = true;
                     }
-
                     break;
                 }
         }

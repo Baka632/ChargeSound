@@ -9,11 +9,35 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>Resources\ChargeSound.ico</ApplicationIcon>
+    <IncludePackageReferencesDuringMarkupCompilation>true</IncludePackageReferencesDuringMarkupCompilation>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\ChargeSound.ico" />
+  </ItemGroup>
 
 
   <ItemGroup>
+    <PackageReference Include="HandyControl" Version="3.4.0" />
     <PackageReference PrivateAssets="all" Include="Microsoft.Windows.CsWin32" Version="0.3.18-beta" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>
